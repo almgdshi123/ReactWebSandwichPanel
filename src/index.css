@@ -1,13 +1,47 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap");
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   font-family: "Cairo", sans-serif;
+}
+:root {
+
+  --main-color: #ff9800;
+
+  --boday-font: "Cairo", sans-serif;
+  --biggest-font: 1.75rem;
+  --bigger-font: 1.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+
+  --font-regular: 500;
+  --font-medium: 600;
+  --font-semi-bold: 700;
+}
+@media screen and (min-width: 1000px) {
+  :root {
+    --biggest-font: 2.25rem;
+    --bigger-font: 2rem;
+
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+  }
+}
+a {
+  text-decoration: none;
+}
+section {
+  padding: 0 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+.grid {
+  display: grid;
+ }
