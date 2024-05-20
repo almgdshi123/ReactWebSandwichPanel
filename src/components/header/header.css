@@ -195,11 +195,16 @@ ul{
     border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
   
-  .dropdown-menu ul li:hover a{
+  .dropdown-menu ul li:hover a ,.dropdown-menu ul li:hover a {
     color: rgb(212, 33, 9);
     cursor: pointer;
   }
-  
+  .dropdown-menu ul li a:visited{
+    color: black;
+  }
+  .dropdown-menu ul li a:active{
+    color: var(--main-color);
+  }
   .dropdown-menu ul li:hover img{
     opacity: 1;
     cursor: pointer;
@@ -218,7 +223,7 @@ ul{
     transition: var(--speed);
   }
   
-  .dropdownItem a{
+  .dropdownItem a {
     max-width: 150px;
     margin-right: 10px;
     transition: var(--speed);

@@ -1,17 +1,14 @@
 import React from "react";
-import Header from "../../../components/header/Header";
 import SwiperComponent from "../../../components/swiper/Swiper";
 import "./home.css";
 import Content from "./content/Content";
-import Footer from "../../../components/footer/Footer";
 export default function Home() {
   return (
     <div>
-      <Header></Header>
       <div className="home-container">
       <div id="whatsapp">
           <a
-            href="https://api.whatsapp.com/send?phone=31633854062"
+            href="https://api.whatsapp.com/send?phone=966500513512"
             target="_blank"
             id="toggle1"
             rel="noopener noreferrer"
@@ -24,8 +21,7 @@ export default function Home() {
           <SwiperComponent></SwiperComponent>
         </div>
       </div>
-      <Content></Content>
-      <Footer></Footer>
+      <Content title="home"></Content>
     </div>
   );
 }

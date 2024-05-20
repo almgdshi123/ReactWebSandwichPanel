@@ -1,6 +1,8 @@
 import "./header.css";
 import React, {useState, useEffect, useRef} from 'react';
 
+import { dataPage } from "../dataPage";
+
 function Header() {
   const [open, setOpen] = useState(false);
 
@@ -38,13 +40,12 @@ function Header() {
           </button>
           <h3 className="">شركة  سندوش  <br/><span>بنل وغرف جاهزه </span></h3>
           <ul>
-            <DropdownItem icon="ri-home-4-line"  text = {"الصفحة الرئيسية "}/>
-            <DropdownItem icon="ri-briefcase-4-line" text = {"برجولات  "}/>
-            <DropdownItem icon="ri-shopping-bag-3-line" text = {"مظلات"}/>
-            <DropdownItem icon="ri-shopping-bag-3-line" text = {"سواتر"}/>
-            <DropdownItem icon="ri-shopping-bag-3-line" text = {"هناجر ومستودعات"}/>
-            <DropdownItem icon="ri-shopping-bag-3-line" text= {"شبوك"}/>
-            <DropdownItem icon="ri-shopping-bag-3-line" text = {"قرميد"}/>
+            {
+              dataPage.map((item, index) => (
+                
+             
+            <DropdownItem href = {item.href} icon= {item.icon}  text = {item.text}  key = {index}/>
+          )) }
           </ul>
         </div>
       </div>
@@ -80,7 +81,7 @@ function DropdownItem(props){
     
         <i className={props.icon}></i>
     
-      <a > {props.text} </a>
+      <a href={props.href} > {props.text} </a>
     </li>
   );
 }

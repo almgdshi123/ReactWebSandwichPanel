@@ -1,9 +1,9 @@
 .footer {
     display: flex;
-    background-color: #04364A; /* لون الخلفية */
-    color: white; /* لون النص */
-    text-align: center; /* محاذاة النص في المنتصف */
-    padding: 10px 0; /* تباعد داخلي */
+    background-color: #04364A; 
+    color: white; 
+    text-align: center; 
+    padding: 10px 0; 
     position: absolute;
     
 justify-content: center;
