@@ -44,7 +44,7 @@ function Header() {
               dataPage.map((item, index) => (
                 
              
-            <DropdownItem href = {item.href} icon= {item.icon}  text = {item.text}  key = {index}/>
+            <DropdownItem href = {item.href} icon= {item.icon}  text = {item.text} alt = {item.alt}  key = {index}/>
           )) }
           </ul>
         </div>
@@ -52,9 +52,12 @@ function Header() {
         </div>
 
         <div className="logo">
+        <a href="/" title="شركة الرائدة في مجال السندويش بانل والغرف الجاهزة">
          <span className="main-color"> شركة</span>
          <span> سندوش بنل وغرف جاهزه  </span>
+          </a>
         </div>
+
       </div>
       <div className="header-bottom">
         <div className="search">
@@ -72,6 +75,17 @@ function Header() {
           <i className="ri-youtube-line"></i>
         </div>
       </div>
+      <div id="whatsapp">
+          <a
+            href="https://api.whatsapp.com/send?phone=966500513512"
+            target="_blank"
+            id="toggle1"
+            rel="noopener noreferrer"
+            className="wtsapp"
+          >
+            <i className="ri-whatsapp-line"></i>
+          </a>
+        </div>
     </div>
   );
 }
@@ -81,7 +95,7 @@ function DropdownItem(props){
     
         <i className={props.icon}></i>
     
-      <a href={props.href} > {props.text} </a>
+      <a href={props.href} alt={props.alt} >  {props.text} </a>
     </li>
   );
 }

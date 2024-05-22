@@ -1,27 +1,34 @@
 
 export const dataPage = [
-    {
-        title: "home",
-        text: "الصفحة الرئيسية ",
-        icon: "ri-home-4-line",
-        href: "/",
-    },
-    {
-        title: "Sandwich",
-        text: "سندوش",
-        icon: "ri-briefcase-4-line",
-        href: "/product-page/sandwich",
-    },
-    {
-        title: "Mazalat",
-        text: "مضلات جلسات خارجية",
-        icon: "ri-umbrella-fill",
-        href: "/product-page/mazalat",
-    },
-    {
-        title: "Room",
-        text: "غرف جاهزة",
-        icon: "ri-shopping-bag-3-line",
-        href: "/product-page/room",
-    },
+    
+        {
+            "title": "home",
+            "text": "الصفحة الرئيسية",
+            "icon": "ri-home-4-line",
+            "href": "/",
+            "alt": "الرئيسية - ابدأ رحلتك في موقعنا من هنا"
+        },
+        {
+            "title": "Sandwich",
+            "text": "سندويش",
+            "icon": "ri-briefcase-4-line",
+            "href": "/product-sandwich/sandwich",
+            "alt": "سندويش بانل - اكتشف منتجاتنا من ألواح الساندوتش بانل"
+        },
+        {
+            "title": "Room",
+            "text": "غرف جاهزة",
+            "icon": "ri-shopping-bag-3-line",
+            "href": "/product-sandwich/room",
+            "alt": "غرف جاهزة - تصفح تصاميم الغرف الجاهزة لكافة الاستخدامات"
+        },
+        {
+            "title": "hnaager",
+            "text": "قسم تركيب الهناجر",
+            "icon": "ri-phone-line",
+            "href": "/product-sandwich/hnaager",
+            "alt": "تركيب الهناجر - خدمات تركيب الهناجر المتكاملة"
+        }
+    
+    
 ];

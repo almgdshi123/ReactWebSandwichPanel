@@ -59,9 +59,11 @@ export default function ProductView() {
                       <div className="img-select">
                         {data.imagedata.map((image, index) => (
                           <div className="img-item" key={index}>
-                            <a
+                            <a 
+                            key={index}
                               href="/"
                               data-id={index + 1}
+
                               onClick={(e) => handleClick(e, index + 1)}
                             >
                               <img src={image.image} alt={image.title} />
@@ -74,7 +76,7 @@ export default function ProductView() {
                     {/*  card left  */}
                     <div className="product-content">
                       <h2 className="product-title">{data.title} </h2>
-                      <a href="/" className="product-link">
+                      <a href={"/product-sandwich/"+item.href} className="product-link" alt={data.alt}>
                         {item.title}
                       </a>
                       <div className="product-rating">
@@ -88,56 +90,41 @@ export default function ProductView() {
 
                       <div className="product-price">
                         <p className="last-price">
-                          السعر السابق: <span>$257.00</span>
+                          <span>{data.priceOld}</span>
                         </p>
                         <p className="new-price">
-                          السعر الجديد: <span>$249.00 (5%)</span>
+                           <span>{data.priceNew}</span>
                         </p>
                       </div>
 
                       <div className="product-detail">
                         <h2>حول الخدمة: </h2>
                         <p>
-                          الساندوتش بانل بكونه عبارة عن ألواح مركبة تتألف من
-                          طبقتين خارجيتين من الصاج المجلفن أو الألومنيوم، تحيطان
-                          بطبقة عازلة من مواد مثل البولي يوريثين، البوليستيرين،
-                          الصوف الصخري، أو الصوف الزجاجي1. هذه الألواح خفيفة
-                          الوزن ولكنها توفر مقاومة عالية وعزل حراري جيد، مما
-                          يجعلها مثالية للمحلات التجارية التي تحتاج إلى تحكم
-                          فعال في درجات الحرارة.
+                        {data.description}
                         </p>
                         <p>
-                        مميزات الساندوتش بانل:
+                        مميزات  {data.title}:
 
 
                         </p>
                         <ul>
-                          <li>
-                          مقاومة عالية: <span>تتحمل الأحمال الثقيلة وتقاوم الظروف الجوية القاسية.</span>
-                          </li>
-                          <li>
-                          عزل حراري ممتاز: <span>يحافظ على درجة حرارة مثالية داخل المتجر، مما يوفر في استهلاك الطاقة. </span>
-                          </li>
-                          <li>
-                          تركيب سريع وسهل:  <span>يسهل تركيبها ولا تحتاج إلى صيانة مكثفة، مما يقلل من تكاليف العمالة والوقت.</span>
-                          </li>
-                          <li>
-                          تصميم متنوع: <span>تأتي بألوان وأنماط مختلفة تتناسب مع الذوق العصري والتصميم </span>
-                          </li>
-                          <li>
-                             التوصيل مجاني: <span>مجاني</span>
-                          </li>
+                          {data.features.map((feature, featureId)  => (
+                            
+                       
+                          <li key={featureId}>
+                         {feature.title} : <span> {feature.description}    .</span>
+                          </li>   ))}
                         </ul>
                       </div>
 
                       <div className="purchase-info">
                         <input type="number" min="0" value="1" />
-                        <button type="button" className="btn">
+                        <a type="button"             href="https://api.whatsapp.com/send?phone=966500513512" target="_blank" rel="noopener noreferrer" className="btn">
                         تسوق <i className=" ri-shopping-cart-fill"></i>
-                        </button>
-                        <button type="button" className="btn">
+                        </a>
+                        {/* <button type="button" className="btn">
                           اضافة للمفضلة <i className="ri-heart-line"></i>
-                        </button>
+                        </button> */}
                       </div>
 
                       <div className="social-links">

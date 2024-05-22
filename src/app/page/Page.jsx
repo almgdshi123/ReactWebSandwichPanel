@@ -15,8 +15,8 @@ export default function Page() {
         <Route path="*" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} /> 
-        <Route path="/product-page/:href" element={<ProductPage />} />
-        <Route path="/prodcut-details/:href/:id" element={<ProductView />  } />
+        <Route path="/product-sandwich/:href" element={<ProductPage />} />
+        <Route path="/prodcut-sandwich-details/:href/:id" element={<ProductView />  } />
 
 
 

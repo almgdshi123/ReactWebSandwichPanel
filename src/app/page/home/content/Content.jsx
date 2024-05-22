@@ -13,93 +13,51 @@ export default function Content({ title }) {
 }
 
 function DropdownItem(props) {
-  if (props.title === "home") {
-    return (
-      <div>
-        <section id="service">
-          {}
-          {dataContent.map((item, index) => (
-            <div className="subjcet-container" key={index}>
-              <div className="poular-box">
-                <h2>{item.title} </h2>
-                <a href={"/product-page/"+item.href} className="main-color">
-                  المزيد من التفاصيل
-                </a>
+  const renderContent = (item, index) => (
+    <div className="subjcet-container" key={index}>
+    
+      <div className="poular-box">
+        <h2>{item.title}</h2>
+        {props.title === "home"? (
+        <a href={"/product-sandwich/" + item.href} className="main-color" alt={item.alt}>
+          المزيد من التفاصيل
+        </a>): null}
+      </div>
+      <div className="subject-box grid">
+        {item.data.map((data, index) => (
+          <div className="card" key={index}>
+            <div className="header">
+              <div className="image">
+                <img src={data.image} alt={data.altimage } />
+                <a href={"/product-sandwich/" + item.href} className="tag" alt={item.alt+""+data.altimage}>{item.title}</a>
               </div>
-              <div className="subject-box grid">
-                {item.data.map((data, index) => (
-                  <div className="card" key={index}>
-                    <div className="header">
-                      <div className="image">
-                        <img src={data.image} alt={data.title} />
-                        <a href={"/product-page/"+item.href} className="tag">{item.title}</a>
-                      </div>
-                      <div className="date">
-                        <span>مارس 2020</span>
-                        <button className="menu-btn">
-                          <i className="ri-share-line"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <div className="info">
-                      <a rel="noopener noreferrer" href={'/prodcut-details/'+item.href+'/'+data.id} className="block">
-                        <span className="title main-color">
-                          {data.description}{" "}
-                        </span>
-                      </a>
-                      <p className="description">{data.content}</p>
-                    </div>
-                  </div>
-                ))}
+              <div className="date">
+                <span>{data.price}</span>
+                <button className="menu-btn">
+                  <i className="ri-share-line"></i>
+                </button>
               </div>
             </div>
-          ))}
-        </section>
+            <div className="info">
+              <a rel="noopener noreferrer" href={'/prodcut-sandwich-details/' + item.href + '/' + data.id} className="block" alt={data.alt}>
+                <span className="title main-color">
+                  {data.description}{" "}
+                </span>
+              </a>
+              <p className="description">{data.content}</p>
+            </div>
+          </div>
+        ))}
       </div>
-    );
-  } else {
-    return (
-      <div>
-        <section id="service">
-          {}
-          {dataContent.map((item, index) =>
-            item.href === props.title ? (
-              <div className="subjcet-container" key={index}>
-                <div className="poular-box">
-                  <h2>{item.title} </h2>
-              
-                </div>
-                <div className="subject-box grid">
-                  {item.data.map((data, index) => (
-                    <div className="card" key={index}>
-                      <div className="header">
-                        <div className="image">
-                          <img src={data.image} alt={data.title} />
-                          <a href={"/product-page/"+item.href} className="tag">{item.title}</a>
-                        </div>
-                        <div className="date">
-                          <span>مارس 2020</span>
-                          <button className="menu-btn">
-                            <i className="ri-share-line"></i>
-                          </button>
-                        </div>
-                      </div>
-                      <div className="info">
-                      <a rel="noopener noreferrer" href={'/prodcut-details/'+item.href+'/'+data.id} className="block">
-                          <span className="title main-color">
-                            {data.description}{" "}
-                          </span>
-                        </a>
-                        <p className="description">{data.content}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ) : null
-          )}
-        </section>
-      </div>
-    );
-  }
+    </div>
+  );
+  
+  return (
+    <div>
+      <section id="service">
+        {dataContent.map((item, index) => (props.title === "home" || item.href === props.title) ? renderContent(item, index) : null)}
+      </section>
+    </div>
+  );
+  
 }

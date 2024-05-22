@@ -32,7 +32,7 @@ export default function SwiperComponent() {
        
           <SwiperSlide key={index} >
             <div className="subscribe">
-            <img src={item.image} alt={item.title} />
+            <img src={item.image} alt={item.description} />
               <p>{item.title}</p>
               <br />
             </div>

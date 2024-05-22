@@ -113,6 +113,9 @@ ul{
   a {
     text-decoration: none;
   }
+  a:visited,a:active,a:hover,a:link{
+    color: black;
+  }
   
   .menu-trigger img{
     position: absolute;
@@ -228,6 +231,60 @@ ul{
     margin-right: 10px;
     transition: var(--speed);
   }
+  /* whatsapp */
+#whatsapp a{
+  text-decoration: none;
+}
+#whatsapp .wtsapp {
+  position: fixed;
+  transition: all.5s ease;
+  background-color: #25d366;
+  display: block;
+  text-align: center;
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.15);
+  border-radius: 50px;
+  border-right: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 45px;
+  bottom: 50px;
+  left: 10%;
+  border: 0;
+  z-index: 9999;
+  width: 70px;
+  line-height: 70px;
+}
+#whatsapp .wtsapp::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-color: #25d366;
+  border-radius: 50%;
+  -webkit-animation: pulse-border 1500ms ease-out infinite;
+  animation: pulse-border 1500ms ease-out infinite;
+}
+#whatsapp .wtsapp:focus {
+  border: none;
+  outline: none;
+}
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
+/* end watsapp */
+
   
   @media screen and (min-width: 1000px) {
     .social-icons i{
