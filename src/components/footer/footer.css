@@ -11,5 +11,6 @@ align-items: center;
     width: 100%;
   }
   .footer a {
-    color: #64CCC5;
+    color: #DAFFFB;
+    text-decoration:revert-layer ;
   }

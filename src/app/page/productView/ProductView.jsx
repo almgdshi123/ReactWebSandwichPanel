@@ -48,7 +48,7 @@ export default function ProductView() {
                       <div className="img-display">
                         <div className="img-showcase" ref={imgShowcaseRef}>
                           {data.imagedata.map((image, imageId) => (
-                            <img
+                            <img loading="lazy"
                               src={image.image}
                               alt={image.title}
                               key={imageId}
@@ -66,7 +66,7 @@ export default function ProductView() {
 
                               onClick={(e) => handleClick(e, index + 1)}
                             >
-                              <img src={image.image} alt={image.title} />
+                              <img src={image.image} alt={image.title} loading="lazy" />
                             </a>
                           </div>
                         ))}

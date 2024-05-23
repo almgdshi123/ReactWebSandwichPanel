@@ -82,6 +82,8 @@ function Header() {
             id="toggle1"
             rel="noopener noreferrer"
             className="wtsapp"
+            title="تواصل معنا عبر الواتساب"
+            alt="تواصل معنا عبر الواتساب"
           >
             <i className="ri-whatsapp-line"></i>
           </a>

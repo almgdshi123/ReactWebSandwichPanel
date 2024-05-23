@@ -72,6 +72,7 @@
     
     .title {
       display: block;
+      color: #A80000;
       font-size: var(--normal-font-size);
       line-height: 1.35rem;
       font-weight: 600;

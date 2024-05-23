@@ -12,8 +12,8 @@ export default function Content({ title }) {
   );
 }
 
-function DropdownItem(props) {
-  const renderContent = (item, index) => (
+ function DropdownItem(props) {
+  const  renderContent = (item, index) => (
     <div className="subjcet-container" key={index}>
     
       <div className="poular-box">
@@ -28,19 +28,20 @@ function DropdownItem(props) {
           <div className="card" key={index}>
             <div className="header">
               <div className="image">
-                <img src={data.image} alt={data.altimage } />
+                
+                <img  src={data.image} alt={data.altimage }  loading="lazy"/>
                 <a href={"/product-sandwich/" + item.href} className="tag" alt={item.alt+""+data.altimage}>{item.title}</a>
               </div>
               <div className="date">
                 <span>{data.price}</span>
-                <button className="menu-btn">
+                <button  aria-label="مشاركة" className="menu-btn">
                   <i className="ri-share-line"></i>
                 </button>
               </div>
             </div>
             <div className="info">
               <a rel="noopener noreferrer" href={'/prodcut-sandwich-details/' + item.href + '/' + data.id} className="block" alt={data.alt}>
-                <span className="title main-color">
+                <span className="title ">
                   {data.description}{" "}
                 </span>
               </a>

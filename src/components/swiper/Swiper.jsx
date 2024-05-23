@@ -32,9 +32,13 @@ export default function SwiperComponent() {
        
           <SwiperSlide key={index} >
             <div className="subscribe">
-            <img src={item.image} alt={item.description} />
+            <img                 className="swiper-lazy"
+ src={item.image} alt={item.description} loading="lazy" />
+
               <p>{item.title}</p>
               <br />
+                              <div className="swiper-lazy-preloader"></div>
+
             </div>
           </SwiperSlide>
         ))}
